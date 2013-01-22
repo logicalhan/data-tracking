@@ -1,9 +1,9 @@
 <div class="form">
   <%= form_for @event_datum do |f| -%>
-    <%= f.select :event_id, Event.all.map {|e| [e.name, e.id]} %>
-    <%= text_field_tag :tracked_day %>
-    <%= select_tag :tracked_hour, options_for_select((0..23).map {|h| [h,h]}) %>
-    <%= f.submit %>
+    <%= f.select :event_id, Event.all.map {|e| [e.name, e.id]} %><br />
+    <%= text_field_tag :tracked_day %><br />
+    <%= select_tag :tracked_hour, options_for_select((0..23).map {|h| [h,h]}) %><br />
+    <%= f.submit "Track"%>
   <% end -%>
 </div>
 <script type="text/javascript">
