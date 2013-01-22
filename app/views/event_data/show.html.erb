@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tracked at:</strong>
+  <%= @event_datum.tracked_at.strftime("%b/%d/%Y %H:00") %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event_datum.event.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_datum_path(@event_datum) %> |
+<%= link_to 'Back', event_data_path %>

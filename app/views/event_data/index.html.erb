@@ -1,0 +1,29 @@
+<h1>Listing event_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tracked at</th>
+      <th>Event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_data.each do |event_datum| %>
+    <tr>
+      <td><%= event_datum.tracked_at %></td>
+      <td><%= event_datum.event.name  %></td>
+      <td><%= link_to 'Show', event_datum %></td>
+      <td><%= link_to 'Edit', edit_event_datum_path(event_datum) %></td>
+      <td><%= link_to 'Destroy', event_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Event datum', new_event_datum_path %>

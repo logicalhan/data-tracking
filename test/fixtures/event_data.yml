@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tracked_at: 2013-01-21 22:45:37
+  event_id: 
+
+two:
+  tracked_at: 2013-01-21 22:45:37
+  event_id: 

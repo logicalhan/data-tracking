@@ -1,0 +1,13 @@
+<div class="form">
+  <%= form_for @event_datum do |f| -%>
+    <%= f.select :event_id, Event.all.map {|e| [e.name, e.id]} %>
+    <%= text_field_tag :tracked_day %>
+    <%= select_tag :tracked_hour, options_for_select((0..23).map {|h| [h,h]}) %>
+    <%= f.submit %>
+  <% end -%>
+</div>
+<script type="text/javascript">
+  var picker = new Pikaday({ field: document.getElementById('tracked_day') });
+  $("#event_datum_event_id").chosen();
+  $("#tracked_hour").chosen();
+</script>
